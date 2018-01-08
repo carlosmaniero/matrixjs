@@ -11,7 +11,7 @@ Cria um novo canvas MxN, com uma cor padrão
 ### clean
 Limpa a matriz. O tamanho permanece o mesmo. Todos os pixels ficam com a cor padrão.
 
-### paint [x] [y] [cor]
+### paint [linha] [coluna] [cor]
 Colore um pixel de coordenadas (X,Y) com uma determinada cor.
 
 ### paint-vertical [coluna] [linhaInicial] [linhaFinal] [cor]
