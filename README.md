@@ -1,46 +1,45 @@
 # Explicação
 
-Dada uma matriz de tamanho MxN na qual cada elemento represente um pixel, crie
-um programa que leia uma sequência de comandos e os interprete manipulando a
-matriz de acordo com a descrição abaixo de cada comando.
+Dada um canvas de tamanho WxH na qual cada elemento represente um pixel, crie
+um programa que leia uma sequência de comandos e os interprete manipulando o canvas de acordo com a descrição abaixo de cada comando.
 
 ## Comandos
 
-### I M N
-Cria uma nova matriz MxN. Todos os pixels são brancos (O).
+### new <largura> <altura> <cor>
+Cria um novo canvas MxN, com uma cor padrão
 
-### C
-Limpa a matriz. O tamanho permanece o mesmo. Todos os pixels ficam brancos (O).
+### clean
+Limpa a matriz. O tamanho permanece o mesmo. Todos os pixels ficam com a cor padrão.
 
-### L X Y C
-Colore um pixel de coordenadas (X,Y) na cor C.
+### paint <x> <y> <cor>
+Colore um pixel de coordenadas (X,Y) com uma determinada cor.
 
-### V X Y1 Y2 C
-Desenha um segmento vertical na coluna X nas linhas de Y1 a Y2 (intervalo
-inclusivo) na cor C.
+### paint-vertical <coluna> <linhaInicial> <linhaFinal> <cor>
+Desenha uma linha vertical na coluna X nas linhas de Y1 a Y2 (intervalo
+inclusivo) com determinada cor.
 
-### H X1 X2 Y C
-Desenha um segmento horizontal na linha Y nas colunas de X1 a X2 (intervalo
-inclusivo) na cor C.
+### paint-horizontal <linha> <colunaInicial> <colunaFinal> <cor>
+Desenha uma linha horizontal na linha Y nas colunas de X1 a X2 (intervalo
+inclusivo) com determinada cor.
 
-### K X1 Y1 X2 Y2 C
-Desenha um retangulo de cor C. (X1,Y1) é o canto superior esquerdo e (X2,Y2) o
+### paint-rectangle <linhaInicial> <colunaInicial> <linhaFinal> <colunaFinal> <cor>
+Desenha um retangulo de cor C. <linhaInicial> <colunaInicial> é o canto superior esquerdo e <linhaFinal> <colunaFinal> o
 canto inferior direito.
 
-### F X Y C
-Preenche a região com a cor C. A região R é definida da seguinte forma:
+### fill <linha> <coluna> <cor>
+Preenche a região com a cor determinada. A região é definida da seguinte forma:
 O pixel (X,Y) pertence à região. Outro pixel pertence à região, se e somente se,
 ele tiver a mesma cor que o pixel (X,Y) e tiver pelo menos um lado em comum com
 um pixel pertencente à região.
 
-### S name
-Escreve a imagem em um arquivo de nome name.
-
-### X
+### exit
 Encerra o programa.
 
+### help
+Exibe a lista de comandos
+
 ## Considerações
-Comandos diferentes de I, C, L, V, H, K, F, S e X devem ser ignorados
+Comandos diferentes dos que foram informados devem exibir um erro.
 
 ## Testes
 Entrada 01:
